@@ -101,5 +101,9 @@ export class RoomieService {
   getAllBookings() {
     return this.http.get(`${this.apiEndPoint}GetAllBookings`);
   }
+
+  getData() {
+    return this.http.get(`${this.apiEndPoint}CardData`)
+  }
   
 }
