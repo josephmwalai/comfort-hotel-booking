@@ -1,0 +1,74 @@
+<mat-card>
+    <div class="row">
+      <div class="col-12 text-end">
+        <button class="btn btn-primary custom-button-spacing" (click)="AddNewRoom()">Add New</button>
+        <button class="btn btn-success custom-button-spacing" (click)="onSaveRoom()">Bulk Update</button>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-12">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="srNo">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Sr No </th>
+            <td mat-cell *matCellDef="let room; let sr = index"> {{ sr + 1 }} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="roomName">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Room Name </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="text" [(ngModel)]="room.roomName" class="form-control" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="isAcAvailable">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Available </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="checkbox" [(ngModel)]="room.isAcAvailable" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="roomCapacity">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Capacity </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="text" [(ngModel)]="room.roomCapacity" class="form-control" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="isActive">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Active </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="checkbox" [(ngModel)]="room.isActive" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="roomTariff">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Tariff </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="number" [(ngModel)]="room.roomTariff" class="form-control" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="extensionNo">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Extension No </th>
+            <td mat-cell *matCellDef="let room">
+              <input type="number" [(ngModel)]="room.extensionNo" class="form-control" />
+            </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef class="table-header"> Action </th>
+            <td mat-cell *matCellDef="let room">
+              <button class="btn btn-sm btn-danger" (click)="onRemove(room.roomId)">Delete</button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-header"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="dataSource.data.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)">
+        </mat-paginator>
+      </div>
+    </div>
+  </mat-card>
+  

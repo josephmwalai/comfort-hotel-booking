@@ -1,0 +1,22 @@
+<div class="navbar">
+    <a class="nav-link" routerLink="/dashboard" routerLinkActive="active-link">Home</a>
+    <a  routerLink="/company">About Us</a>
+    <a routerLink="/newBooking">New Booking</a>
+    <a routerLink="/bookings">Bookings</a>
+    <a routerLink="/rooms">Rooms</a>
+    <a routerLink="/booking-calendar">Booking Calendar</a>
+    <a routerLink="/customers">Customers</a>
+    <a routerLink="/users">Users</a>
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <!-- <button type="submit"><span class="glyphicon glyphicon-search"></span></button> -->
+    </div>
+    <div class="navbar-right">
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <button class="btn btn-success" type="button" onclick="onLogoff()">Log Off</button>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

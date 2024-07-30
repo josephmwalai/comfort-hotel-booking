@@ -1,0 +1,20 @@
+.font-bold {
+    font-weight: bold;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body i {
+    font-size: 2rem; 
+}
+
+.card-body div {
+    text-align: right;
+}
+.container {
+    margin-top: 10px;
+}

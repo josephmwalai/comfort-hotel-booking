@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Cinzel:900|Playfair+Display');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Header */
+.header {
+  background: url("https://s-media-cache-ak0.pinimg.com/originals/84/f1/5b/84f15baf30fe8b454787e5dd9391446d.jpg") no-repeat center center;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.header-text {
+  text-align: center;
+  position: relative;
+  top: 20%;
+  width: 60%;
+  margin: 0 auto;
+}
+.header-text h2 {
+  margin-bottom: 70px;
+  font-family: 'Playfair Display', serif;
+  color: #FA9F42;
+  font-size: 30px;
+  
+}
+.header-text .btn {
+  font-family: 'Playfair Display', serif; 
+  text-decoration: none;
+  background-color: #1c1c1c;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0px 0px 1px 1px #B3B7EE;
+  margin-bottom: 40px;
+}
+
+.btn:hover {
+  background-color: #C2847A;
+  color: #000;
+  font-weight: 700;
+}
+h1 {
+  font-family: 'Cinzel', serif;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 35px;
+  margin: 0;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+//   color: #FBF9FF;
+  font-size: 25px;
+}
+h3 {
+  font-family: 'Playfair Display', serif;
+//   color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0px;
+  line-height: 25px;
+}
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+//   color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  line-height: 20px;
+  letter-spacing: 1px
+}
+
+/* Main */
+.sponsor {
+  padding: 15px;
+  text-align: center;
+  margin: 0 auto;
+  height: 100px;
+}
+.sponsor img {
+  position: relative;
+  top: 10px;
+  width: 150px;
+  
+}
+#logo {
+  padding-left: 5px;
+}
+
+.main {
+  background: url("http://wallpaper-gallery.net/images/red-background-wallpapers/red-background-wallpapers-0.jpg");
+  margin: 0;
+  padding: 40px;
+}
+.offer {
+  margin: 40px auto;
+  width: 60%;
+}
+.offer-item {
+  text-align: center;
+  border: 1px solid #fff;
+  margin: 10px 5px;
+  padding: 30px 10px;;
+}
+

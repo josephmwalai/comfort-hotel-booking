@@ -1,0 +1,51 @@
+<div class="row">
+    <br><br>
+    <div class="col-12">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="bookingId">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Booking ID </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.bookingId }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="userName">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> User Name </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.userName }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="passengerName">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Passenger Name </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.passengerName }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="mobileNo">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Mobile No </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.mobileNo }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="bookingFromDate">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Booking From Date </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.bookingFromDate | date: 'yyyy-MM-dd' }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="bookingToDate">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Booking To Date </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.bookingToDate | date: 'yyyy-MM-dd' }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="bookingRate">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Booking Rate </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.bookingRate }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="naration">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Naration </th>
+          <td mat-cell *matCellDef="let booking"> {{ booking.naration }} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-header"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [length]="dataSource.data.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
+  </div>
